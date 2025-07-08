@@ -1,0 +1,69 @@
+.referances {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    gap: 30px;
+    background-color: #f9f9f9;
+}
+
+.referances h2 {
+    font-size: 28px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    color: #333;
+}
+
+.reference-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.reference-track {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 40px;
+    animation: scroll 20s linear infinite;
+    width: fit-content;
+}
+
+.reference-item {
+    flex: 0 0 auto;
+    height: 80px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reference-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Scroll efekti */
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .reference-item {
+        height: 60px;
+        width: 100px;
+    }
+
+    .referances h2 {
+        font-size: 22px;
+    }
+}

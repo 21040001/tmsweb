@@ -1,0 +1,49 @@
+.about-page {
+  width: 100%;
+  background-color: #f8f9fa;
+  text-align: center;
+  position: relative;
+}
+
+.about-page img{
+    width: 100%;
+    height: auto;
+}
+
+.about-page h1 {
+  position: relative;
+  font-size: 36px;
+  color: #0e77b3;
+  margin-bottom: 30px;
+  z-index: 1;
+}
+
+.about-page p {
+  position: relative;
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  z-index: 1;
+}
+
+/* Responsive düzen */
+@media (max-width: 768px) {
+  .about-page h1 {
+    font-size: 28px;
+  }
+
+  .about-page p {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .about-page::before {
+    height: 200px;
+  }
+  .about-page img{
+    width: 100%;
+    height: auto;
+    margin-top: 73px;
+}}

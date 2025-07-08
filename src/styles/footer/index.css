@@ -1,0 +1,60 @@
+.footer-item {
+  position: relative;
+  margin-bottom: 10px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-item:hover {
+  color: #0d6efd;
+  padding-left: 10px;
+}
+
+.col-md-3 {
+  text-align: left;
+}
+
+/* Sosyal ikon stilleri */
+.social-icons i {
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+/* RESPONSIVE TASARIM: mobilde hizalamayı ortala */
+@media (max-width: 768px) {
+  .row.mb-5.justify-content-center.gx-4 {
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .col-md-3 {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer-item {
+    text-align: center;
+  }
+
+  .row.text-center.border-top.pt-3 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .col-md-3.text-start,
+  .col-md-4.text-end,
+  .col-md-4 {
+    width: 100%;
+    text-align: center !important;
+    margin-top: 10px;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+}

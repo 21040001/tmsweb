@@ -1,0 +1,43 @@
+import React from 'react';
+import Header from '../components/Header';
+import img from '../assets/Image/Ims.png';
+import "../styles/projectsStyles/Onboard.css"
+const Ims = () => {
+  return (
+    <div>
+      <Header isFixed={"fixed"} />
+      {/*<h5 className='h5-proje'>Projelerimiz:</h5>*/}
+      <ul className='list-project'>
+        <li><a href="/project/ims">IMS</a></li>
+        <li><a href="/project/portal">Tms Portal</a></li>
+        <li><a href="/project/testBench">Tms Bench</a></li>
+        <li><a href="/project/qr">Tms Qr</a></li>
+        <li><a href="/project/lokomotif">Lokomotif</a></li>
+      </ul>
+      <div className="onboard">
+        <img src={img} alt="OnBoard" />
+        <div>
+          <h1> IMS – Interactive Mobile System</h1>
+
+          <p> Tren setlerine yerleştirilen sensör ve
+            haberleşme cihazları sayesinde:</p>
+
+          <ul>
+            <li>Üç eksende ivme,</li>
+            <li>Sıcaklık</li>
+            <li> Anlık konum verileri toplanır.</li>
+          </ul>
+
+          <p>Titreşim verilerini analiz eden derin
+            öğrenme modeli, trenin yol ve ekipman
+            durumunu sürekli izler.</p>
+          <p>Model, sistemin normal davranışını
+            öğrenerek olası anormallikleri erken tespit
+            eder.</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Ims;

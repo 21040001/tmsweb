@@ -1,0 +1,9 @@
+.dic {
+    position: absolute;
+    inset: 0;
+    background-image: url("../Image/back3.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: opacity 2s ease;
+    z-index: 0;
+}

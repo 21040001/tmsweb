@@ -1,0 +1,187 @@
+.home {
+    height: 100vh;
+    background-size: cover;
+}
+
+.home .header {
+    height: 70px;
+    display: flex;
+    padding-top: 10px;
+    margin: 0px;
+    width: 100%;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+    padding-left: 20px;
+}
+
+.home .header img {
+    height: 50px;
+    padding-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    color: white;
+    font-size: 26px;
+    border: none;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu ul {
+    margin-left: 40px;
+    margin-right: 80px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+    font-size: 20px;
+    display: flex;
+    list-style-type: none;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.menu ul li a:hover {
+    text-decoration: dotted !important;
+}
+
+.lang-button button {
+    width: 90px;
+    height: 30px;
+    background-color: rgba(233, 231, 228, 0.071);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.simple-underline {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    padding-bottom: 4px;
+}
+
+.simple-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #0e77b3;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.simple-underline:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.about {
+    padding-top: 70px;
+    color: white;
+    text-align: center;
+}
+
+.about p {
+    font-size: 35px;
+    margin-top: 30px;
+    width: 45%;
+    margin: 0 auto;
+}
+
+@media (max-width: 950px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        display: none;
+    }
+
+    .menu.active {
+        display: flex;
+        flex: 1;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .lang-button {
+        margin-top: 15px;
+    }
+
+    .about p {
+        width: 90%;
+        font-size: 24px;
+    }
+    .about{
+        margin-top: 250px;
+    }
+}
+
+.lang-wrapper {
+    position: relative;
+}
+
+.languageDiv {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.languageDiv ul {
+    list-style: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.languageDiv ul li {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.languageDiv ul li:hover {
+    background-color: #555;
+}

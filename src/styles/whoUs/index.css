@@ -1,0 +1,83 @@
+.whoUs {
+  background-color: #f3f3f4;
+  border-top: 2px solid #225276;
+  padding: 40px 0;
+}
+
+.whoUs > h1 {
+  color: rgb(18, 18, 18);
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* YATAY SCROLL ALANI */
+.whoUs > .scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 5% 5%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Scrollbar gizle (isteğe bağlı) */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* KART TASARIMI */
+.cardMisyon {
+  flex: 0 0 auto; /* YATAY scroll için önemli */
+  width: 350px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.cardMisyon:hover {
+  transform: scale(1.03);
+}
+
+.cardMisyon > .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  padding: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #225276;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #d7e1e8;
+}
+
+.card-body p {
+  font-size: 16px;
+  text-align: center;
+  color: #444;
+}
