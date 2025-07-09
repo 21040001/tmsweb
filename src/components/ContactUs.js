@@ -1,9 +1,43 @@
 import "../styles/contactUs/index.css";
+import { useEffect, useRef, useState } from "react";
 
 const Contact = () => {
+    const formRef = useRef(null);
+    const manzilRef = useRef(null);
+
+    const [formVisible, setFormVisible] = useState(false);
+    const [manzilVisible, setManzilVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.target === formRef.current && entry.isIntersecting) {
+                        setFormVisible(true);
+                    }
+                    if (entry.target === manzilRef.current && entry.isIntersecting) {
+                        setManzilVisible(true);
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        if (formRef.current) observer.observe(formRef.current);
+        if (manzilRef.current) observer.observe(manzilRef.current);
+
+        return () => {
+            if (formRef.current) observer.unobserve(formRef.current);
+            if (manzilRef.current) observer.unobserve(manzilRef.current);
+        };
+    }, []);
+
     return (
         <div className="contact">
-            <form>
+            <form
+                ref={formRef}
+                className={`fade-in-section ${formVisible ? "visible" : ""}`}
+            >
                 <h2>Bize mesaj gönderin</h2>
                 <input
                     type="text"
@@ -56,10 +90,17 @@ const Contact = () => {
                         ></textarea>
                     </div>
                 </div>
-                <input type="submit" className="btn btn-primary" value="İletişime geç" />
+                <input
+                    type="submit"
+                    className="btn btn-primary btn-gonder"
+                    value="İletişime geç"
+                />
             </form>
 
-            <div className="manzil">
+            <div
+                ref={manzilRef}
+                className={`manzil fade-in-section ${manzilVisible ? "visible" : ""}`}
+            >
                 <div className="contact-box">
                     <h2>İletişime Geç</h2>
                     <div className="contact-info">

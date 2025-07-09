@@ -3,6 +3,7 @@
   margin-bottom: 10px;
   text-align: left;
   cursor: pointer;
+  font-family:  Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
   transition: all 0.3s ease;
 }
 
@@ -57,4 +58,10 @@
   .social-icons {
     margin-top: 10px;
   }
+}
+div div div h3{
+  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #1d1d1f;
+  font-size: 1.17em;
+  font-weight: 500;
 }

@@ -2,7 +2,35 @@ import React from 'react';
 import Header from '../components/Header';
 import img from '../assets/Image/back4.jpeg';
 import "../styles/projectsStyles/Onboard.css";
+import { useRef } from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+
 const TestBench = () => {
+
+    const projeRef = useRef(null);
+    const [projeVisible, setProjeVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.target === projeRef.current && entry.isIntersecting) {
+                        setProjeVisible(true);
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        if (projeRef.current) observer.observe(projeRef.current);
+
+        return () => {
+            if (projeRef.current) observer.unobserve(projeRef.current);
+        };
+    }, []);
+
+
     return (
         <div>
             <Header isFixed={"fixed"} />
@@ -13,7 +41,7 @@ const TestBench = () => {
                 <li><a href="/project/qr">Tms Qr</a></li>
                 <li><a href="/project/lokomotif">Lokomotif</a></li>
             </ul>
-            <div className="onboard">
+            <div ref={projeRef} className={`onboard fade-in-section ${projeVisible ? "visible" : ""}`}>
                 <img src={img} alt="OnBoard" className='textBanchImg' />
                 <div>
                     <h1>Sensor Test Bench</h1>

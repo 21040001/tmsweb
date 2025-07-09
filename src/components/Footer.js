@@ -6,7 +6,7 @@ function Footer() {
       <div className="row mb-5 justify-content-center gx-4">
         
         <div className="col-md-3">
-          <h5>Site Haritasi </h5>
+          <h3>Site Haritasi </h3>
           <ul className="list-unstyled">
             <li className="footer-item ">Hakkimizde</li>
             <li className="footer-item">Projelerimiz</li>
@@ -16,7 +16,7 @@ function Footer() {
         </div>
 
         <div className="col-md-3">
-          <h5>Departmanlar</h5>
+          <h3>Departmanlar</h3>
           <ul className="list-unstyled">
             <li className="footer-item">TMS Planck</li>
             <li className="footer-item">TMS Ar-Ge</li>
@@ -28,7 +28,7 @@ function Footer() {
         </div>
 
         <div className="col-md-3">
-          <h5>Contact Us</h5>
+          <h3>Contact Us</h3>
           <ul className="list-unstyled">
             <li className="footer-item">
               <i className="bi bi-telephone-fill me-2"></i>+90 541 426 46 92

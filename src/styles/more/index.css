@@ -2,10 +2,10 @@
   background-color: #f9f9f9;
   padding: 60px 20px;
   font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
@@ -16,40 +16,85 @@
   margin-bottom: 40px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
+.departments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s ease;
+/* Ortak kart stili */
+.dept-card {
+  width: 45%;
+  height: 300px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding-top: 130px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  /* Animasyon başlangıç hali */
+  opacity: 0;
+  transform: translateY(15vh);
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+/* Görününce animasyon uygula */
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.card-img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-    margin: 0 auto;
-  margin-bottom: 16px;
+/* Başlık stili */
+.dept-card h1 {
+  font-size: 35px;
+  background-color: #0d59dca4;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
 }
 
-.card-title {
-  font-size: 18px;
+/* Açıklama stili */
+.dept-card p {
   font-weight: 600;
-  margin: 10px 0;
+  font-size: 20px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #050505a5;
+  border-radius: 5px;
 }
 
-.card-desc {
-  font-size: 14px;
-  color: #555;
+/* Arka plan görselleri */
+.ar-ge {
+  background-image: url("../../assets/Image/arge.png");
+}
+
+.planck {
+  background-image: url("../../assets/Image/Planck.jpg");
+}
+
+.motor {
+  background-image: url("../../assets/Image/motor.jpg");
+}
+
+.kaucuk {
+  background-image: url("../../assets/Image/kaucuk.jpg");
+}
+
+.rolling {
+  background-image: url("../../assets/Image/rolling.jpg");
+}
+
+.sinyalizasyon {
+  background-image: url("../../assets/Image/sinyalizasyon.jpg");
 }

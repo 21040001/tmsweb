@@ -34,7 +34,7 @@ const AnimatedPath = () => {
     });
   }, []);
   return (
-    <div className="anim" style={{ position: "relative", background: "#021b3a", width: "100vw", height: "100vh" }}>
+    <div className="anim" style={{ position: "relative", background: "#021b3a", width: "100vw", height: "60vh" }}>
       <div
         ref={backgroundRef}
         style={{ position: "absolute", inset: 0, background: "#000", opacity: 0, zIndex: 0 }}
