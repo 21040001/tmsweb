@@ -2,8 +2,12 @@ import img from "../assets/Image/tms_logo.png";
 import "../styles/headerStyle/index.css";
 import { useEffect, useRef, useState } from "react";
 import { FaBars } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Header = ({ isFixed }) => {
+
+    const { t, i18n } = useTranslation();
+
     const [menuOpen, setMenuOpen] = useState(false);
     const [showLang, setShowLang] = useState(false);
     const langRef = useRef(null);
@@ -39,22 +43,22 @@ const Header = ({ isFixed }) => {
 
             <div className={`menu ${menuOpen ? "active" : ""}`}>
                 <ul>
-                    <li><a href="/" className="simple-underline">Ana Sayfa</a></li>
-                    <li><a href="/about" className="simple-underline">Hakkımızda</a></li>
-                    <li><a href="/project/ims" className="simple-underline">Projelerimiz</a></li>
-                    <li><a href="/contact" className="simple-underline">İletişim</a></li>
+                    <li><a href="/" className="simple-underline">{t("anasayfa")}</a></li>
+                    <li><a href="/about" className="simple-underline">{t("hakkimizde")}</a></li>
+                    <li><a href="/project/ims" className="simple-underline">{t("projelerimiz")}</a></li>
+                    <li><a href="/contact" className="simple-underline">{t("iletisim")}</a></li>
                 </ul>
 
                 <div className="lang-wrapper" ref={langRef}>
                     <div className="lang-button">
-                        <button onClick={toggleLangMenu}>Diller</button>
+                        <button onClick={toggleLangMenu}>{t("diller")}</button>
                     </div>
                     {showLang && (
                         <div className="languageDiv">
                             <ul>
-                                <li>Türkçe</li>
-                                <li>Deutsch</li>
-                                <li>English</li>
+                                <li onClick={() => i18n.changeLanguage("tr")}>Türkçe</li>
+                                <li onClick={() => i18n.changeLanguage("en")}>English</li>
+                                <li onClick={() => i18n.changeLanguage("de")}>Deutsch</li>
                             </ul>
                         </div>
                     )}

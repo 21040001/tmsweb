@@ -36,7 +36,6 @@
   position: relative;
   overflow: hidden;
 
-  /* Animasyon başlangıç hali */
   opacity: 0;
   transform: translateY(15vh);
   transition: transform 0.9s ease, opacity 0.9s ease;
@@ -97,4 +96,29 @@
 
 .sinyalizasyon {
   background-image: url("../../assets/Image/sinyalizasyon.jpg");
+}
+
+@media(max-width:850px) {
+  .dept-card {
+    width: 90%;
+    height: 300px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-top: 130px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(15vh);
+    transition: transform 0.9s ease, opacity 0.9s ease;
+  }
+
+  .departments {
+    display: block;
+  }
 }

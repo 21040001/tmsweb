@@ -1,18 +1,20 @@
 import "../styles/more/index.css";
 import { useEffect, useRef, useState } from "react";
-
-const departments = [
-  { key: "ar-ge", title: "AR-GE", desc: "Yenilikçi mühendislik çözümleri." },
-  { key: "planck", title: "Planck", desc: "Hassas ölçüm ve test sistemleri." },
-  { key: "sinyalizasyon", title: "Sinyalizasyon", desc: "Akıllı trafik çözümleri." },
-  { key: "motor", title: "Motor", desc: "Verimli motor sistemleri." },
-  { key: "kaucuk", title: "Marc Kauçuk", desc: "Kauçuk teknolojileri." },
-  { key: "rolling", title: "Rolling Stock", desc: "Raylı sistem araçları." },
-];
+import { useTranslation } from "react-i18next"; 
 
 const More = () => {
   const sectionRefs = useRef([]);
   const [visibleSections, setVisibleSections] = useState([]);
+  const { t, i18n } = useTranslation();
+
+  const departments = [
+    { key: "ar-ge", title: "TMS AR-GE", desc: t("argeText") },
+    { key: "planck", title: "TMS Planck", desc: t("planckText") },
+    { key: "sinyalizasyon", title: "TMS Sinyalizasyon", desc: t("sinyalizasyonText") },
+    { key: "motor", title: "TMS Motor", desc: t("motorText") },
+    { key: "kaucuk", title: "TMS Marc Kauçuk", desc: t("kaucukText") },
+    { key: "rolling", title: "TMS Rolling Stock", desc: t("rollingText") },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,15 +43,14 @@ const More = () => {
   return (
     <section className="more-section">
       <div className="container">
-        <h2 className="section-title">Departmanlarımız</h2>
+        <h2 className="section-title">{t("departmanlar")}</h2>
         <div className="departments">
           {departments.map((dept, index) => (
             <div
               key={dept.key}
               ref={(el) => (sectionRefs.current[index] = el)}
-              className={`dept-card ${dept.key} fade-in-section ${
-                visibleSections.includes(index) ? "visible" : ""
-              }`}
+              className={`dept-card ${dept.key} fade-in-section ${visibleSections.includes(index) ? "visible" : ""
+                }`}
             >
               <h1>{dept.title}</h1>
               <p>{dept.desc}</p>

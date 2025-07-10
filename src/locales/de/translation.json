@@ -1,0 +1,36 @@
+{
+  "anasayfa": "Startseite",
+  "hakkimizde": "Über uns",
+  "projelerimiz": "Unsere Projekte",
+  "iletisim": "Kontakt",
+  "diller": "Sprachen",
+  "tms": "Innovativ, Modern, Kreativ und Hochtechnologisch",
+  "misyonTitle": "Unsere Mission",
+  "vizyonTitle": "Unsere Vision",
+  "misyon": "Die F&E-Kultur im Eisenbahnsektor durch heimische Technologien stärken.",
+  "vizyon": "Ein Unternehmen werden, das die Abhängigkeit der Türkei vom Ausland im Eisenbahnwesen reduziert und heimische Projekte weltweit vermarktet.",
+  "departmanlar": "Unsere Abteilungen",
+  "argeText": "Innovative Ingenieurlösungen.",
+  "planckText": "Präzise Mess- und Prüfsysteme.",
+  "motorText": "Effiziente Motorsysteme.",
+  "sinyalizasyonText": "Intelligente Verkehrslösungen.",
+  "rollingText": "Fahrzeuge für Schienensysteme.",
+  "kaucukText": "Gummitechnologien.",
+
+  "contactTitle": "Senden Sie uns eine Nachricht",
+  "inputIsmSoyisim": "Vor- und Nachname",
+  "inputTelefonNumarasi": "Telefonnummer",
+  "inputEmail": "E-Mail",
+  "inputSehir": "Stadt",
+  "inputSirket": "Firma",
+  "inputMesaj": "Ihre Nachricht",
+  "inputBtn": "Kontaktieren Sie uns",
+
+  "adress": "Adresse",
+  "telefon": "Telefon",
+  "referanslar": "Referenzen",
+
+  "siteHaritasi": "Seitenübersicht",
+  "hakimizdeText1": "TMS ist die umfassendste Webanwendung für Transportmanagementsysteme in der Türkei. Unser Ziel ist es, alle Prozesse im Transportsektor zu digitalisieren, die Effizienz der Unternehmen zu steigern und Kosten zu senken.",
+  "hakimizdeText2": "Unsere Anwendungen behaupten ihre führende Position in der Branche durch benutzerfreundliche Oberflächen und leistungsstarke Funktionen. Mit uns können Sie Ihre Transportprozesse einfach verwalten, Berichte erstellen und Ihre Arbeitsabläufe optimieren."
+}

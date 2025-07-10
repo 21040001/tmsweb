@@ -4,69 +4,112 @@ import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { useRef } from "react";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
 const Home = () => {
-     const [menuOpen, setMenuOpen] = useState(false);
-        const [showLang, setShowLang] = useState(false);
-        const langRef = useRef(null);
-    
-        const toggleMenu = () => {
-            setMenuOpen(!menuOpen);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [showLang, setShowLang] = useState(false);
+    const langRef = useRef(null);
+
+    const { t, i18n } = useTranslation();
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+    const toggleLangMenu = () => {
+        setShowLang(!showLang);
+    };
+
+    // Dışarı tıklanınca kapat
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (langRef.current && !langRef.current.contains(event.target)) {
+                setShowLang(false);
+            }
         };
-    
-        const toggleLangMenu = () => {
-            setShowLang(!showLang);
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
         };
-    
-        // Dışarı tıklanınca kapat
-        useEffect(() => {
-            const handleClickOutside = (event) => {
-                if (langRef.current && !langRef.current.contains(event.target)) {
-                    setShowLang(false);
-                }
-            };
-            document.addEventListener("mousedown", handleClickOutside);
-            return () => {
-                document.removeEventListener("mousedown", handleClickOutside);
-            };
-        }, []);
+    }, []);
 
     return (
         <div className="home">
             <div className="header">
                 <img src={img} alt="TMS logo" />
-                
+
                 <button className="menu-toggle" onClick={toggleMenu}>
                     <FaBars />
                 </button>
 
                 <div className={`menu ${menuOpen ? "active" : ""}`}>
                     <ul>
-                        <li><a href="/" className="simple-underline">Ana Sayfa</a></li>
-                        <li><a href="/about" className="simple-underline">Hakkımızda</a></li>
-                        <li><a href="/project/ims" className="simple-underline">Projelerimiz</a></li>
-                        <li><a href="/contact" className="simple-underline">İletişim</a></li>
+                        <li><a href="/" className="simple-underline">{t("anasayfa")}</a></li>
+                        <li><a href="/about" className="simple-underline">{t("hakkimizde")}</a></li>
+                        <li><a href="/project/ims" className="simple-underline">{t("projelerimiz")}</a></li>
+                        <li><a href="/contact" className="simple-underline">{t("iletisim")}</a></li>
                     </ul>
                     <div className="lang-wrapper" ref={langRef}>
-                    <div className="lang-button">
-                        <button onClick={toggleLangMenu}>Diller</button>
-                    </div>
-                    {showLang && (
-                        <div className="languageDiv">
-                            <ul>
-                                <li>Türkçe</li>
-                                <li>Deutsch</li>
-                                <li>English</li>
-                            </ul>
+                        <div className="lang-button">
+                            <button onClick={toggleLangMenu}>{t("diller")}</button>
                         </div>
-                    )}
-                </div>
+                        {showLang && (
+                            <div className="languageDiv">
+                                <ul>
+                                    <li onClick={() => i18n.changeLanguage("tr")}>Türkçe</li>
+                                    <li onClick={() => i18n.changeLanguage("en")}>English</li>
+                                    <li onClick={() => i18n.changeLanguage("de")}>Deutsch</li>
+                                </ul>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
 
             <div className="about">
-                <h1>TMS AR-GE</h1>
-                <p>Yenilik, Modern, Yaratıcı ve Son Teknoloji</p>
+                <h1 style={{ fontSize: "3rem", marginBottom: "20px" }}>TMS AR-GE</h1>
+                <p style={{ fontSize: "1.2rem", marginBottom: "30px" }}>
+                    {t("tms") || "Yenilikçi, Modern ve Yaratıcı Teknoloji Çözümleri"}
+                </p>
+
+                <div style={{ display: "flex", gap: "20px", justifyContent: "center" }}>
+                    <a
+                        href="/about"
+                        style={{
+                            padding: "12px 30px",
+                            backgroundColor: "#00faff",
+                            borderRadius: "8px",
+                            color: "#000",
+                            fontWeight: "bold",
+                            textDecoration: "none",
+                            boxShadow: "0 0 8px #00faff",
+                            transition: "transform 0.3s",
+                        }}
+                        onMouseEnter={(e) => (e.target.style.transform = "scale(1.05)")}
+                        onMouseLeave={(e) => (e.target.style.transform = "scale(1)")}
+                    >
+                        {t("hakkimizde")}
+                    </a>
+                    <a
+                        href="/project/ims"
+                        style={{
+                            padding: "12px 30px",
+                            border: "2px solid #00faff",
+                            borderRadius: "8px",
+                            color: "#00faff",
+                            fontWeight: "bold",
+                            textDecoration: "none",
+                            transition: "transform 0.3s",
+                        }}
+                        onMouseEnter={(e) => (e.target.style.transform = "scale(1.05)")}
+                        onMouseLeave={(e) => (e.target.style.transform = "scale(1)")}
+                    >
+                        {t("projelerimiz")}
+                    </a>
+                </div>
             </div>
+
         </div>
     );
 };

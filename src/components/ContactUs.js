@@ -1,10 +1,12 @@
+import { t } from "i18next";
 import "../styles/contactUs/index.css";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
     const formRef = useRef(null);
     const manzilRef = useRef(null);
-
+    const { t, i18n } = useTranslation();
     const [formVisible, setFormVisible] = useState(false);
     const [manzilVisible, setManzilVisible] = useState(false);
 
@@ -38,11 +40,11 @@ const Contact = () => {
                 ref={formRef}
                 className={`fade-in-section ${formVisible ? "visible" : ""}`}
             >
-                <h2>Bize mesaj gönderin</h2>
+                <h2>{t("contactTitle")}</h2>
                 <input
                     type="text"
                     className="form-control"
-                    placeholder="İsim Soyisim"
+                    placeholder={t("inputIsmSoyisim")}
                     aria-label="İsim Soyisim"
                 />
                 <div className="row">
@@ -50,7 +52,7 @@ const Contact = () => {
                         <input
                             type="text"
                             className="form-control"
-                            placeholder="Telefon numarası"
+                            placeholder={t("inputTelefonNumarasi")}
                             aria-label="Telefon numarası"
                         />
                     </div>
@@ -68,7 +70,7 @@ const Contact = () => {
                         <input
                             type="text"
                             className="form-control"
-                            placeholder="Şehir"
+                            placeholder={t("inputSehir")}
                             aria-label="Şehir"
                         />
                     </div>
@@ -76,7 +78,7 @@ const Contact = () => {
                         <input
                             type="text"
                             className="form-control"
-                            placeholder="Şirketiniz"
+                            placeholder={t("inputSirket")}
                             aria-label="Şirketiniz"
                         />
                     </div>
@@ -85,7 +87,7 @@ const Contact = () => {
                     <div className="col">
                         <textarea
                             className="form-control"
-                            placeholder="Mesajınız"
+                            placeholder={t("inputMesaj")}
                             aria-label="Mesajınız"
                         ></textarea>
                     </div>
@@ -93,7 +95,7 @@ const Contact = () => {
                 <input
                     type="submit"
                     className="btn btn-primary btn-gonder"
-                    value="İletişime geç"
+                    value={t("inputBtn")}
                 />
             </form>
 
@@ -102,13 +104,13 @@ const Contact = () => {
                 className={`manzil fade-in-section ${manzilVisible ? "visible" : ""}`}
             >
                 <div className="contact-box">
-                    <h2>İletişime Geç</h2>
+                    <h2>{t("inputBtn")}</h2>
                     <div className="contact-info">
-                        <h3>Adres</h3>
+                        <h3>{t("adress")}</h3>
                         <p>Etimesgut YHT Araç Bakım Atölye Müdürlüğü Ayaş Yolu Bulvarı, Etiler Mah. No:89/C</p>
-                        <h3>Telefon</h3>
+                        <h3>{t("telefon")}</h3>
                         <p>+90 541 426 46 92</p>
-                        <h3>Mail</h3>
+                        <h3>Email</h3>
                         <p>atahayurdakul@tmstechnic.com<br />ehuseyinbalin@tmstechnic.com</p>
                     </div>
                 </div>

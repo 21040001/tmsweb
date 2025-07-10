@@ -1,22 +1,22 @@
 import "../styles/footer/index.css";
-
+import { useTranslation } from "react-i18next";
 function Footer() {
+  const { t, i18n } = useTranslation();
   return (
     <div className="container mt-5 pt-5 border-top ml-auto mr-auto">
       <div className="row mb-5 justify-content-center gx-4">
         
         <div className="col-md-3">
-          <h3>Site Haritasi </h3>
+          <h3>{t("siteHaritasi")}</h3>
           <ul className="list-unstyled">
-            <li className="footer-item ">Hakkimizde</li>
-            <li className="footer-item">Projelerimiz</li>
-            <li className="footer-item">Iletisim</li>
-            <li className="footer-item">Referanslar</li>
+            <li className="footer-item ">{t("hakkimizde")}</li>
+            <li className="footer-item">{t("projelerimiz")}</li>
+            <li className="footer-item">{t("iletisim")}</li>
           </ul>
         </div>
 
         <div className="col-md-3">
-          <h3>Departmanlar</h3>
+          <h3>{t("departmanlar")}</h3>
           <ul className="list-unstyled">
             <li className="footer-item">TMS Planck</li>
             <li className="footer-item">TMS Ar-Ge</li>

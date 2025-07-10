@@ -1,0 +1,36 @@
+{
+    "anasayfa": "Ana Sayfa",
+    "hakkimizde": "Hakkımızda",
+    "projelerimiz": "Projelerimiz",
+    "iletisim": "İletişim",
+    "diller": "Diller",
+    "tms": "Yenilik, Modern, Yaratıcı ve Son Teknoloji",
+    "misyonTitle": "Misyonumuz",
+    "vizyonTitle": "Vizyonumuz",
+    "misyon": "Demiryolu sektöründe yerli teknolojiler ile AR-GE kültürünü güçlendirmek.",
+    "vizyon": "Türkiye'nin demiryolunda dışa bağımlılığını azaltarak yerli projeleri dünyaya pazarlayan bir şirket olmak.",
+    "departmanlar": "Departmanlarımız",
+    "argeText": "Yenilikçi mühendislik çözümleri.",
+    "planckText": "Hassas ölçüm ve test sistemleri.",
+    "motorText": "Verimli motor sistemleri.",
+    "sinyalizasyonText": "Akıllı trafik çözümleri.",
+    "rollingText": "Raylı sistem araçları.",
+    "kaucukText": "Kauçuk teknolojileri.",
+
+    "contactTitle":"Bize mesaj gönderin",
+    "inputIsmSoyisim":"İsim Soyisim",
+    "inputTelefonNumarasi":"Telefon numarası",
+    "inputEmail":"E*mail",
+    "inputSehir":"Şehir",
+    "inputSirket":"Şirket",
+    "inputMesaj":"Mesajınız",
+    "inputBtn":"İletişime geç",
+
+    "adress":"Adres",
+    "telefon":"Telefon",
+    "referanslar":"Referanslar",
+
+    "siteHaritasi":"Site Haritasi",
+    "hakimizdeText1":"TMS , Türkiye'nin en kapsamlı taşımacılık yönetim sistemi web uygulamasıdır. Amacımız, taşımacılık sektöründeki tüm süreçleri dijitalleştirerek, işletmelerin verimliliğini artırmak ve maliyetlerini düşürmektir.",
+    "hakimizdeText2":"Uygulamalarımız, kullanıcı dostu arayüzü ve güçlü özellikleri ile sektördeki lider konumunu sürdürmektedir. Bizim ile, Taşımacılık süreçlerinizi kolayca yönetin, raporlar oluşturun ve iş akışlarınızı optimize edin."
+}

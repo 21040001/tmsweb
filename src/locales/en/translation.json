@@ -1,0 +1,36 @@
+{
+  "anasayfa": "Home",
+  "hakkimizde": "About Us",
+  "projelerimiz": "Our Projects",
+  "iletisim": "Contact",
+  "diller": "Languages",
+  "tms": "Innovative, Modern, Creative and High-Tech",
+  "misyonTitle": "Our Mission",
+  "vizyonTitle": "Our Vision",
+  "misyon": "To strengthen R&D culture in the railway sector with domestic technologies.",
+  "vizyon": "To become a company that reduces Turkey's foreign dependency in railways and markets domestic projects globally.",
+  "departmanlar": "Our Departments",
+  "argeText": "Innovative engineering solutions.",
+  "planckText": "Precision measurement and testing systems.",
+  "motorText": "Efficient motor systems.",
+  "sinyalizasyonText": "Smart traffic solutions.",
+  "rollingText": "Railway vehicles.",
+  "kaucukText": "Rubber technologies.",
+
+  "contactTitle": "Send us a message",
+  "inputIsmSoyisim": "Full Name",
+  "inputTelefonNumarasi": "Phone Number",
+  "inputEmail": "E-mail",
+  "inputSehir": "City",
+  "inputSirket": "Company",
+  "inputMesaj": "Your Message",
+  "inputBtn": "Get in Touch",
+
+  "adress": "Address",
+  "telefon": "Phone",
+  "referanslar": "References",
+
+  "siteHaritasi": "Site Map",
+  "hakimizdeText1": "TMS is the most comprehensive transportation management system web application in Turkey. Our goal is to digitize all processes in the transportation sector, increase operational efficiency, and reduce costs.",
+  "hakimizdeText2": "Our applications maintain a leading position in the industry with their user-friendly interface and powerful features. With us, easily manage your transportation processes, generate reports, and optimize your workflows."
+}
