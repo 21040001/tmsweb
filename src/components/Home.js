@@ -78,12 +78,12 @@ const Home = () => {
                         href="/about"
                         style={{
                             padding: "12px 30px",
-                            backgroundColor: "#00faff",
+                            backgroundColor: "#0e77b3",
                             borderRadius: "8px",
-                            color: "#000",
+                            color: "#ffffffff",
                             fontWeight: "bold",
                             textDecoration: "none",
-                            boxShadow: "0 0 8px #00faff",
+                            boxShadow: "0 0 8px #0e77b3",
                             transition: "transform 0.3s",
                         }}
                         onMouseEnter={(e) => (e.target.style.transform = "scale(1.05)")}
@@ -95,9 +95,9 @@ const Home = () => {
                         href="/project/ims"
                         style={{
                             padding: "12px 30px",
-                            border: "2px solid #00faff",
+                            border: "2px solid #ffffffff",
                             borderRadius: "8px",
-                            color: "#00faff",
+                            color: "#fff",
                             fontWeight: "bold",
                             textDecoration: "none",
                             transition: "transform 0.3s",

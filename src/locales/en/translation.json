@@ -9,6 +9,8 @@
   "vizyonTitle": "Our Vision",
   "misyon": "To strengthen R&D culture in the railway sector with domestic technologies.",
   "vizyon": "To become a company that reduces Turkey's foreign dependency in railways and markets domestic projects globally.",
+  "degerTitle": "Our Values",
+  "deger": "Strive for excellence, Integrity, Innovation, Passion, Collaboration, Reliability",
   "departmanlar": "Our Departments",
   "argeText": "Innovative engineering solutions.",
   "planckText": "Precision measurement and testing systems.",
@@ -24,7 +26,7 @@
   "inputSehir": "City",
   "inputSirket": "Company",
   "inputMesaj": "Your Message",
-  "inputBtn": "Get in Touch",
+  "inputBtn": "Send",
 
   "adress": "Address",
   "telefon": "Phone",

@@ -9,9 +9,9 @@ function Footer() {
         <div className="col-md-3">
           <h3>{t("siteHaritasi")}</h3>
           <ul className="list-unstyled">
-            <li className="footer-item ">{t("hakkimizde")}</li>
-            <li className="footer-item">{t("projelerimiz")}</li>
-            <li className="footer-item">{t("iletisim")}</li>
+            <li className="footer-item " onClick={()=>{window.location.href = "/about"}}>{t("hakkimizde")}</li>
+            <li className="footer-item" onClick={()=> window.location.href=("/project/ims")}>{t("projelerimiz")}</li>
+            <li className="footer-item" onClick={()=> window.location.href=("/contact")}>{t("iletisim")}</li>
           </ul>
         </div>
 
@@ -34,7 +34,7 @@ function Footer() {
               <i className="bi bi-telephone-fill me-2"></i>+90 541 426 46 92
             </li>
             <li className="footer-item">
-              <i className="bi bi-envelope-at-fill me-2"></i>ehuseyinbalin@tmstechnic.com
+              <i className="bi bi-envelope-at-fill me-2" onClick={()=>{window.location.href = "mailto:ehuseyinbalin@tmstechnic.com"}}></i>ehuseyinbalin@tmstechnic.com
             </li>
             <li className="footer-item">
               <i className="bi bi-geo-alt-fill me-2"></i>Ankara, Türkiye

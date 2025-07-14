@@ -35,10 +35,9 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-
   opacity: 0;
   transform: translateY(15vh);
-  transition: transform 0.9s ease, opacity 0.9s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 /* Görününce animasyon uygula */
@@ -47,31 +46,34 @@
   transform: translateY(0);
 }
 
-/* Başlık stili */
-.dept-card h1 {
-  font-size: 35px;
-  background-color: #0d59dca4;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 5px;
+
+.dept-card > div {
+  background: rgba(0, 0, 0, 0.333); 
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(1px); 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  margin: 0 auto;
 }
 
-/* Açıklama stili */
-.dept-card p {
-  font-weight: 600;
-  font-size: 20px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: #050505a5;
-  border-radius: 5px;
+/* Başlık yazısı */
+.dept-card h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
+
+/* Açıklama yazısı */
+.dept-card p {
+  font-size: 18px;
+  color: #f1f1f1;
+  line-height: 1.4;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
 
 /* Arka plan görselleri */
 .ar-ge {

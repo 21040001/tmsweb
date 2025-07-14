@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+Elbette! Aşağıda TMS (örnek olarak "TMS Ar-Ge") adlı bir web sitesi için temel bir `README.md` dosyası örneği veriyorum. Bu belge, geliştiriciler veya proje yöneticileri için sitenin yapısını ve kurulum adımlarını açıklar. İçeriği, ihtiyaçlarınıza göre özelleştirebilirim.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+```markdown
+# TMS Web Sitesi
 
-In the project directory, you can run:
+**TMS Ar-Ge** firmasının kurumsal tanıtım ve ürün/hizmet bilgilendirme web sitesidir. Kullanıcı dostu arayüzü ve modern tasarımı ile şirketin misyonunu, projelerini ve hizmetlerini tanıtmaktadır.
 
-### `npm start`
+## 🔗 Canlı Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+👉 [tmsarge.com](https://tmsarge.com)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📁 Proje Yapısı
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
 
-### `npm run build`
+TMS-Web/
+├── public/                 # Statik dosyalar (resimler, favicon, vs.)
+├── src/
+│   ├── assets/             # Görseller ve medya dosyaları
+│   ├── components/         # Tekrar kullanılabilir React bileşenleri
+│   ├── pages/              # Ana sayfa, hakkımızda, iletişim vb. sayfalar
+│   ├── styles/             # CSS/SASS dosyaları
+│   └── App.js              # Uygulamanın temel yapısı
+├── .gitignore
+├── package.json
+└── README.md
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+````
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ Kurulum ve Çalıştırma
 
-### `npm run eject`
+Bu projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. Projeyi Klonlayın
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/kullaniciAdi/tms-web.git
+cd tms-web
+````
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2. Gerekli Paketleri Kurun
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+### 3. Projeyi Başlatın
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Projeyi [http://localhost:3000](http://localhost:3000) adresinde görüntüleyebilirsiniz.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📦 Kullanılan Teknolojiler
 
-### Analyzing the Bundle Size
+* **ReactJS** – Bileşen tabanlı web arayüzü
+* **React Router** – Sayfa yönlendirmeleri
+* **SASS / CSS Modules** – Stiller
+* **Bootstrap / Tailwind (opsiyonel)** – Responsive tasarım
+* **EmailJS / Formik (opsiyonel)** – İletişim formları
+* **Vite / CRA** – Proje başlatıcı (hangisi tercih edildiyse)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🧩 Özellikler
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* Kurumsal tanıtım sayfaları (Hakkımızda, Projeler, İletişim)
+* Modern ve responsive arayüz
+* Videolu ve görsel anlatım destekleri
+* Çok dilli destek (isteğe bağlı)
+* SEO uyumlu yapı
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 👤 Geliştirici(ler)
 
-### Deployment
+* **Davronbek Abdurazzokov**
+  [GitHub](https://github.com/21040001) | [LinkedIn](https://linkedin.com/in/davronbek-abdurazzoqov)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📝 Lisans
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Bu proje MIT lisansı ile lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasını inceleyin.
+
+```
+
+

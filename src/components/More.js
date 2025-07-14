@@ -1,6 +1,6 @@
 import "../styles/more/index.css";
 import { useEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 
 const More = () => {
   const sectionRefs = useRef([]);
@@ -26,7 +26,7 @@ const More = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.2 }
     );
 
     sectionRefs.current.forEach((ref) => {
@@ -52,8 +52,10 @@ const More = () => {
               className={`dept-card ${dept.key} fade-in-section ${visibleSections.includes(index) ? "visible" : ""
                 }`}
             >
-              <h1>{dept.title}</h1>
-              <p>{dept.desc}</p>
+              <div>
+                <h1>{dept.title}</h1>
+                <p>{dept.desc}</p>
+              </div>
             </div>
           ))}
         </div>

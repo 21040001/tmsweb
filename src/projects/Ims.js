@@ -36,9 +36,9 @@ const Ims = () => {
       {/*<h5 className='h5-proje'>Projelerimiz:</h5>*/}
       <ul className='list-project'>
         <li><a href="/project/ims">IMS</a></li>
-        <li><a href="/project/portal">Tms Portal</a></li>
-        <li><a href="/project/testBench">Tms Bench</a></li>
-        <li><a href="/project/qr">Tms Qr</a></li>
+        <li><a href="/project/portal">TMS Portal</a></li>
+        <li><a href="/project/testBench">TMS Bench</a></li>
+        <li><a href="/project/qr">TMS Qr</a></li>
         <li><a href="/project/lokomotif">Lokomotif</a></li>
       </ul>
       <div ref={projeRef} className={`onboard fade-in-section ${projeVisible ? "visible" : ""}`}>
