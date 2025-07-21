@@ -15,12 +15,12 @@
     height: 30px;
     background-color: #0e77b3;
     color: white;
-    border: 1px solid white;
     border-radius: 5px;
 }
 
 .lang-button button:hover{
-    background-color:rgba(233, 231, 228, 0) ;
+    background-color:rgb(233, 231, 228) ;
+    color: black;
 }
 
 .Header ul {
